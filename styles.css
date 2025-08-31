@@ -1,0 +1,141 @@
+:root{
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --accent: #3498db;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
+}
+
+/* Reset small */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height:1.6;
+  color:#333;
+}
+
+/* Hero */
+.hero{
+  background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)),
+              url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9535eb8a-7037-4d91-92ee-d7fab562327c.png') center/cover no-repeat;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  color:white;
+}
+
+/* Property card */
+.property-card{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius:10px;
+  overflow:hidden;
+}
+.property-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+.btn-primary{
+  background:var(--secondary);
+  color:white;
+  padding:12px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
+}
+.btn-primary:hover{
+  background:#c0392b;
+  transform:translateY(-2px);
+}
+
+/* Feature icon */
+.feature-icon{
+  width:60px;
+  height:60px;
+  background:var(--accent);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+/* Search container card */
+.search-container{
+  background:white;
+  border-radius:10px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Nav link underline animation */
+.nav-link{
+  position:relative;
+  padding:10px 0;
+  margin:0 15px;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--secondary);
+  transition:width 0.3s ease;
+}
+.nav-link:hover::after{
+  width:100%;
+}
+
+/* property badge */
+.property-badge{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:var(--secondary);
+  color:white;
+  padding:5px 15px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* Testimonial card */
+.testimonial-card{
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  margin:15px;
+}
+
+/* Agent card */
+.agent-card{
+  text-align:center;
+  padding:20px;
+  border-radius:10px;
+  transition:transform 0.3s ease;
+}
+.agent-card:hover{
+  transform:translateY(-5px);
+}
+
+/* Contact info card */
+.contact-info-card{
+  background:var(--light);
+  padding:30px;
+  border-radius:10px;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  .hero{height:80vh;text-align:center;}
+  .search-container{margin:0 20px;}
+}
